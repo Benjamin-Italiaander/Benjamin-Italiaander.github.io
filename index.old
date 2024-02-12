@@ -2,24 +2,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
-<link href="./css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="./js/bootstrap.min.js"></script>
-<script src="./jquery-3.7.1.min.js"></script>
-
-<link href="./Font-Awesome/css/fontawesome.css" rel="stylesheet">
-<script defer src="./Font-Awesome/js/all.js"></script>
-<link href="./Font-Awesome/css/brands.css" rel="stylesheet">
-<link href="./Font-Awesome/css/solid.css" rel="stylesheet">
-<link href="./css.css" rel="stylesheet">
-
-
-<head><title>Benjamin his calendar</title></head>
-<body>
- <div class="container">
-
-
-
+ 
 <head>
      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
  
