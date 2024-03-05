@@ -6,7 +6,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-149SW6X5M5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});{dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-149SW6X5M5');
