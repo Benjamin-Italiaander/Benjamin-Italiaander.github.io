@@ -1,9 +1,0 @@
-[submodule "reken-quizz"]
-	path = reken-quizz
-	url = ssh://git@100.64.0.11/benjamin/reken-quizz.git
-[submodule "reken-werkbladen"]
-	path = reken-werkbladen
-	url = ssh://git@100.64.0.11/benjamin/reken-werkbladen.git
-[submodule "klokijk-quizz"]
-	path = klokijk-quizz
-	url = ssh://git@100.64.0.11/benjamin/klokijk-quizz.git
