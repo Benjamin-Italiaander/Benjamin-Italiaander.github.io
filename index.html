@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -19,89 +19,316 @@
   </script>
 
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Benjamin Italiaander</title>
+  <meta name="description" content="Benjamin Italiaander: Linux fanatic, network engineer and local AI enthusiast. Plus free exercises for kids to learn to tell time and do maths.">
   <meta name="author" content="Benjamin Italiaander">
   <meta name="google-site-verification" content="uwUZaiFvC0DxrMF_7aIv0UdVboGEiEGZbyVhraUjAQ4" />
+  <meta name="color-scheme" content="light dark">
 
-  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --surface: #ffffff;
+      --text: #14141f;
+      --muted: #5c5c70;
+      --border: #e6e6ef;
+      --accent: #5b5bf0;
+      --accent-soft: #ececfe;
+      --shadow: 0 1px 2px rgba(20, 20, 40, .04), 0 8px 24px rgba(20, 20, 40, .06);
+      --shadow-hover: 0 2px 4px rgba(20, 20, 40, .06), 0 16px 40px rgba(20, 20, 40, .12);
+      --c1: #f59e0b; --c1-soft: #fef3c7;
+      --c2: #10b981; --c2-soft: #d1fae5;
+      --c3: #ec4899; --c3-soft: #fce7f3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0e0e16;
+        --surface: #171722;
+        --text: #ededf5;
+        --muted: #a0a0b8;
+        --border: #2a2a3a;
+        --accent: #8b8bff;
+        --accent-soft: #23234a;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3);
+        --shadow-hover: 0 16px 40px rgba(0, 0, 0, .5);
+        --c1-soft: #3a2a0a;
+        --c2-soft: #0a3328;
+        --c3-soft: #3d1029;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: saturate(180%) blur(12px);
+      -webkit-backdrop-filter: saturate(180%) blur(12px);
+      background: color-mix(in srgb, var(--bg) 75%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; text-decoration: none; letter-spacing: -.02em; font-size: 1.05rem; }
+    .logo span { color: var(--accent); }
+    nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+    nav ul a {
+      text-decoration: none; color: var(--muted); font-weight: 500; font-size: .95rem;
+      padding: 8px 14px; border-radius: 999px; transition: background .2s, color .2s;
+    }
+    nav ul a:hover { color: var(--text); background: var(--accent-soft); }
+
+    /* Hero */
+    .hero { position: relative; padding: 96px 0 72px; overflow: hidden; }
+    .hero::before {
+      content: ""; position: absolute; inset: -40% -10% auto; height: 520px; z-index: -1;
+      background:
+        radial-gradient(closest-side, color-mix(in srgb, var(--accent) 22%, transparent), transparent) 20% 50% / 60% 100% no-repeat,
+        radial-gradient(closest-side, color-mix(in srgb, var(--c3) 16%, transparent), transparent) 80% 40% / 50% 90% no-repeat;
+      filter: blur(20px);
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .85rem; font-weight: 600; color: var(--accent);
+      background: var(--accent-soft); padding: 6px 14px; border-radius: 999px;
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.75rem); line-height: 1.08; letter-spacing: -.035em;
+      font-weight: 800; margin: 20px 0 18px; max-width: 14ch;
+    }
+    h1 .grad {
+      background: linear-gradient(90deg, var(--accent), var(--c3));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .lead { font-size: 1.15rem; color: var(--muted); max-width: 58ch; margin: 0; }
+
+    /* Cards */
+    .cards {
+      display: grid; gap: 20px; margin-top: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      --c: var(--accent); --c-soft: var(--accent-soft);
+      display: flex; flex-direction: column; gap: 12px;
+      text-decoration: none; padding: 28px;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .card:hover, .card:focus-visible { transform: translateY(-4px); box-shadow: var(--shadow-hover); border-color: var(--c); outline: none; }
+    .card.c1 { --c: var(--c1); --c-soft: var(--c1-soft); }
+    .card.c2 { --c: var(--c2); --c-soft: var(--c2-soft); }
+    .card.c3 { --c: var(--c3); --c-soft: var(--c3-soft); }
+    .icon {
+      width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center;
+      font-size: 1.5rem; color: var(--c); background: var(--c-soft);
+    }
+    .card h3 { margin: 8px 0 0; font-size: 1.2rem; letter-spacing: -.01em; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; flex: 1; }
+    .go { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: .95rem; color: var(--c); }
+    .go i { transition: transform .25s; }
+    .card:hover .go i { transform: translateX(4px); }
+
+    /* About */
+    .exercises { padding: 72px 0 96px; border-top: 1px solid var(--border); }
+    .exercises h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+    .about-head { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; }
+    .avatar {
+      width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center;
+      font-weight: 800; font-size: 1.6rem; color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--c3));
+    }
+    .eyebrow { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+    .about h2 {
+      margin: 8px 0 12px; font-size: clamp(1.5rem, 3.4vw, 2.2rem); line-height: 1.2;
+      letter-spacing: -.025em; font-weight: 800;
+    }
+    .about h2 .sep { color: var(--border); font-weight: 400; margin: 0 .15em; }
+    .tagline {
+      margin: 0 0 12px; font-size: 1.2rem; font-weight: 600;
+      background: linear-gradient(90deg, var(--accent), var(--c3));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .location { margin: 0; color: var(--muted); font-size: .95rem; max-width: 70ch; }
+    .location i { color: var(--accent); }
+    .intro { margin: 40px 0 0; max-width: 75ch; }
+    .intro p { font-size: 1.08rem; color: var(--muted); margin: 0 0 16px; }
+    .about strong { color: var(--text); font-weight: 600; }
+
+    .topics {
+      display: grid; gap: 20px; margin-top: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+    }
+    .topic {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+      padding: 28px; box-shadow: var(--shadow);
+    }
+    .topic h3 { margin: 0 0 14px; font-size: 1.15rem; letter-spacing: -.01em; display: flex; gap: 10px; align-items: center; }
+    .topic .emoji {
+      width: 40px; height: 40px; flex: none; border-radius: 12px; display: grid; place-items: center;
+      background: var(--accent-soft); font-size: 1.2rem;
+    }
+    .topic p { margin: 0 0 12px; color: var(--muted); font-size: .96rem; }
+    .topic p:last-child { margin-bottom: 0; }
+
+    .motto {
+      margin-top: 48px; padding: 40px 32px; border-radius: 24px; text-align: center; color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--c3));
+    }
+    .motto-line { margin: 0 0 12px; font-size: clamp(1.15rem, 2.6vw, 1.5rem); font-weight: 800; letter-spacing: -.02em; }
+    .motto-sub { margin: 0 auto; font-style: italic; opacity: .9; max-width: 60ch; }
+
+    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: .9rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; }
+    footer a { text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .hero { padding: 64px 0 48px; }
+      .exercises { padding: 48px 0 64px; }
+      .about-head { grid-template-columns: 1fr; gap: 16px; }
+      .avatar { width: 64px; height: 64px; font-size: 1.3rem; }
+      .topic { padding: 22px; }
+      .motto { padding: 32px 20px; }
+      nav ul a { padding: 8px 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
+  <nav>
+    <div class="wrap">
+      <a class="logo" href="index.html">Benjamin <span>Italiaander</span></a>
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#exercises">Exercises</a></li>
+      </ul>
+    </div>
+  </nav>
 
-      <h1><a href="index.html">Benjamin Italiaander</a></h1>
+  <main>
+    <section class="hero about" id="about">
+      <div class="wrap">
+        <div class="about-head">
+          <div class="avatar" aria-hidden="true">BI</div>
+          <div>
+            <span class="eyebrow">About me</span>
+            <h2>🐧 Linux Fanatic <span class="sep">|</span> Network Engineer <span class="sep">|</span> Open Infrastructure &amp; Local AI Enthusiast</h2>
+            <p class="tagline">Building the infrastructure that should already exist.</p>
+            <p class="location"><i class="bi bi-geo-alt"></i> Based in Western Europe, collaborating with research institutes, universities, and government organizations across the Netherlands, Belgium, and Germany.</p>
+          </div>
+        </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">Over mij</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+        <div class="intro">
+          <p>I'm passionate about designing, building, and maintaining <strong>open, secure, high-performance, and self-hosted infrastructure</strong>, with a strong belief in transparency, sustainability, digital sovereignty, and technological independence.</p>
+          <p>My world revolves around <strong>Linux, enterprise networking, distributed systems, automation, identity management, and modern security architectures</strong>. From low-level network protocols to large-scale infrastructure design, I enjoy understanding how complex systems work and, more importantly, how to make them work better.</p>
+        </div>
 
-      <div class="oefeningen">
-        <p>
-          Vibe-coded oefeningen om te leren klokkijken en rekenen. Deze toetsen zijn gemaakt met AI
-          en kunnen helpen om jouw kinderen te laten rekenen. Wil je iets toevoegen? Voel je vrij om mij te benaderen.
+        <div class="topics">
+          <article class="topic">
+            <h3><span class="emoji">🌐</span> Enterprise Networking &amp; Infrastructure</h3>
+            <p>With extensive experience in enterprise networking, I specialize in technologies such as <strong>LACP, OSPF, BGP, EVPN, VXLAN, VNI, and MACsec</strong>, along with advanced Layer 2 and Layer 3 network architectures.</p>
+            <p>I work with <strong>Mellanox/NVIDIA networking, high-performance Ethernet fabrics, enterprise switching, routing, network virtualization, and software-defined infrastructure</strong>.</p>
+            <p>I'm particularly interested in designing scalable, resilient networks that combine proven networking principles with modern automation and software-defined architectures.</p>
+          </article>
+
+          <article class="topic">
+            <h3><span class="emoji">🖥️</span> Linux, Containers &amp; Automation</h3>
+            <p>Linux has always been at the heart of what I do.</p>
+            <p>My experience covers <strong>enterprise Linux environments, virtualization, containerization, container orchestration, infrastructure automation, and distributed computing</strong>.</p>
+            <p>I enjoy building reliable, reproducible, and maintainable systems using open standards and open-source technologies, while avoiding unnecessary complexity and vendor lock-in.</p>
+            <p>For me, infrastructure should be transparent, understandable, and built to last.</p>
+          </article>
+
+          <article class="topic">
+            <h3><span class="emoji">🧠</span> Local AI &amp; High-Performance Computing</h3>
+            <p>I'm a strong advocate of <strong>local AI, self-hosted machine learning, and decentralized computing</strong>.</p>
+            <p>My interests include <strong>NVIDIA DGX platforms, DGX Spark, Mellanox networking, GPU acceleration, deep learning containers, and distributed AI workloads</strong>.</p>
+            <p>I'm particularly fascinated by the possibilities of combining <strong>NVIDIA DGX Spark with tools like Exo</strong>, exploring how multiple machines and GPUs can collaborate to run powerful AI models locally.</p>
+            <p>I believe the future of AI shouldn't depend entirely on centralized cloud infrastructure. Powerful AI should also be accessible to individuals, researchers, and organizations that value privacy, independence, and control over their own data.</p>
+          </article>
+
+          <article class="topic">
+            <h3><span class="emoji">🔬</span> Experimentation, Research &amp; Innovation</h3>
+            <p>I'm fortunate to work for an organization that gives me the <strong>freedom, resources, and opportunity to design and build experimental environments on a relatively large scale</strong>.</p>
+            <p>This allows me to explore emerging technologies, experiment with advanced networking architectures, distributed computing, high-performance infrastructure, and AI platforms in environments that go well beyond a traditional lab setup.</p>
+            <p>Having the opportunity to test ideas at scale, challenge conventional approaches, and explore technologies before they become mainstream is one of the things I enjoy most about my work.</p>
+            <p>I strongly believe that <strong>innovation comes from curiosity, hands-on experimentation, and the freedom to challenge established solutions</strong>.</p>
+            <p>And sometimes, the best way to understand a system is to break it, figure out why it failed, and rebuild it better.</p>
+          </article>
+        </div>
+
+        <div class="motto">
+          <p class="motto-line">Open Infrastructure. Secure Networks. Local Intelligence. Digital Independence.</p>
+          <p class="motto-sub">Because the most interesting infrastructure isn't just the infrastructure you maintain. It's the infrastructure you get to imagine, design, build, and improve.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="exercises" id="exercises">
+      <div class="wrap">
+        <span class="badge"><i class="bi bi-stars"></i> Free &amp; made with AI</span>
+        <h1>Learn to <span class="grad">tell time</span> and <span class="grad">do maths</span></h1>
+        <p class="lead">
+          Vibe-coded exercises for learning to tell time and do arithmetic. These quizzes were made with AI
+          and can help your children practise maths. Want to add something? Feel free to get in touch.
         </p>
-        <div class="oefening-links">
-          <a href="klokijk-quizz/"><i class="bi bi-clock"></i> Klokkijk-quiz</a>
-          <a href="reken-quizz/"><i class="bi bi-calculator"></i> Reken-quiz</a>
-          <a href="reken-werkbladen/optellen.html"><i class="bi bi-printer"></i> Reken-werkbladen</a>
+
+        <div class="cards">
+          <a class="card c1" href="klokijk-quizz/">
+            <div class="icon"><i class="bi bi-clock"></i></div>
+            <h3>Clock quiz</h3>
+            <p>Full and half hours, quarters and the minute hand: practise reading the clock step by step.</p>
+            <span class="go">Start the quiz <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="card c2" href="reken-quizz/">
+            <div class="icon"><i class="bi bi-calculator"></i></div>
+            <h3>Maths quiz</h3>
+            <p>Addition, subtraction and the times tables from 1 to 11, with instant feedback.</p>
+            <span class="go">Start the quiz <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="card c3" href="reken-werkbladen/optellen.html">
+            <div class="icon"><i class="bi bi-printer"></i></div>
+            <h3>Maths worksheets</h3>
+            <p>Printable worksheets for practising on paper.</p>
+            <span class="go">View worksheets <i class="bi bi-arrow-right"></i></span>
+          </a>
         </div>
       </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Benjamin Italiaander</span>
+      <a href="https://github.com/Benjamin-Italiaander" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
     </div>
-  </header><!-- End Header -->
+  </footer>
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>Over mij</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-12 content">
-          <p>
-            Op deze pagina stonden voorheen mijn projecten. Die zijn niet interessant meer:
-            met vibe coding kan tegenwoordig alles beter en sneller gemaakt worden.
-            Daarom heb ik besloten al mijn projecten hier te verwijderen.
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-  </section><!-- End About Section -->
-
-  <div class="credits">
-    Build with <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/" target="_blank"><i class="bi bi-bootstrap"></i></a>
-    Hosted at <a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a>
-  </div>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>
