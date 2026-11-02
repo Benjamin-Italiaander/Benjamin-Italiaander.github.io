@@ -1,0 +1,7 @@
+# Editor swap / backup files
+*.swp
+.*.swp
+*~
+# OS cruft
+.DS_Store
+Thumbs.db
