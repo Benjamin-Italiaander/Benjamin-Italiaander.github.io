@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://italiaander.net/sitemap.xml

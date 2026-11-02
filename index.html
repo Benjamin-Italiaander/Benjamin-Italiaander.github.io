@@ -27,6 +27,48 @@
   <meta name="color-scheme" content="dark">
   <meta name="theme-color" content="#07070d">
 
+  <link rel="canonical" href="https://italiaander.net/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://italiaander.net/">
+  <meta property="og:title" content="Benjamin Italiaander">
+  <meta property="og:description" content="Linux fanatic, network engineer and open infrastructure &amp; local AI enthusiast. Plus free exercises for kids to learn to tell time and do maths.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://italiaander.net/#me",
+        "name": "Benjamin Italiaander",
+        "url": "https://italiaander.net/",
+        "jobTitle": "Network Engineer",
+        "description": "Linux fanatic, network engineer and open infrastructure & local AI enthusiast, based in Western Europe.",
+        "sameAs": [
+          "https://github.com/Benjamin-Italiaander",
+          "https://www.linkedin.com/in/italiaander",
+          "https://www.cwi.nl/en/people/benjamin-italiaander/",
+          "https://pure.knaw.nl/portal/nl/persons/benjamin-italiaander/"
+        ],
+        "knowsAbout": ["Linux", "Enterprise networking", "SONiC", "BGP EVPN", "VXLAN", "Leaf-spine fabrics", "MACsec", "DNS", "LDAP", "RADIUS", "Automation", "Containers", "Local AI", "NVIDIA DGX Spark", "Exo"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://italiaander.net/#website",
+        "url": "https://italiaander.net/",
+        "name": "Benjamin Italiaander",
+        "author": { "@id": "https://italiaander.net/#me" },
+        "hasPart": [
+          { "@type": "WebPage", "name": "Clock quiz", "url": "https://italiaander.net/klokijk-quizz/", "inLanguage": "nl" },
+          { "@type": "WebPage", "name": "Maths quiz", "url": "https://italiaander.net/reken-quizz/", "inLanguage": "nl" },
+          { "@type": "WebPage", "name": "Maths worksheets", "url": "https://italiaander.net/reken-werkbladen/optellen.html", "inLanguage": "nl" }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -319,6 +361,21 @@
     .go i { transition: transform .25s; }
     .card:hover .go i { transform: translateX(5px); }
 
+    /* Profile links */
+    .socials { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 26px; }
+    .socials-label { font-family: var(--mono); font-size: .82rem; color: var(--muted); margin-right: 4px; }
+    .socials a, .foot-links a {
+      display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+      font-size: .9rem; font-weight: 500; color: var(--muted);
+      padding: 8px 14px; border-radius: 999px; background: var(--glass); border: 1px solid var(--line);
+      transition: color .2s, border-color .2s, background .2s, transform .2s;
+    }
+    .socials a:hover, .foot-links a:hover { color: var(--text); border-color: rgba(167, 139, 250, .5); background: rgba(167, 139, 250, .1); transform: translateY(-2px); }
+    .socials a i, .foot-links a i { font-size: 1.05rem; }
+    .socials a:hover .bi-linkedin { color: #0a8fd8; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .foot-links a { padding: 6px 12px; font-size: .85rem; }
+
     /* Footer */
     footer { border-top: 1px solid var(--line); padding: 32px 0; color: var(--muted); font-size: .9rem; }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; }
@@ -413,6 +470,13 @@
               <i class="bi bi-github"></i> You can find me on GitHub <i class="bi bi-arrow-up-right"></i>
             </a>
             <a class="btn btn-ghost" href="#about">About me <i class="bi bi-arrow-down"></i></a>
+          </div>
+          <div class="socials reveal" style="--d:.4s">
+            <span class="socials-label">find me on</span>
+            <a href="https://github.com/Benjamin-Italiaander" target="_blank" rel="me noopener"><i class="bi bi-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com/in/italiaander" target="_blank" rel="me noopener"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://www.cwi.nl/en/people/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-building"></i><span>CWI</span></a>
+            <a href="https://pure.knaw.nl/portal/nl/persons/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-journal-text"></i><span>KNAW</span></a>
           </div>
         </div>
 
@@ -530,7 +594,12 @@
   <footer>
     <div class="wrap">
       <span>&copy; <span id="year">2026</span> Benjamin Italiaander</span>
-      <a href="https://github.com/Benjamin-Italiaander" target="_blank" rel="noopener"><i class="bi bi-github"></i> github.com/Benjamin-Italiaander</a>
+      <div class="foot-links">
+        <a href="https://github.com/Benjamin-Italiaander" target="_blank" rel="me noopener"><i class="bi bi-github"></i><span>GitHub</span></a>
+        <a href="https://www.linkedin.com/in/italiaander" target="_blank" rel="me noopener"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a>
+        <a href="https://www.cwi.nl/en/people/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-building"></i><span>CWI</span></a>
+        <a href="https://pure.knaw.nl/portal/nl/persons/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-journal-text"></i><span>KNAW</span></a>
+      </div>
     </div>
   </footer>
 
