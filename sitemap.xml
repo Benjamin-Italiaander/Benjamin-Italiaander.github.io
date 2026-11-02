@@ -1,33 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://italiaander.net/</loc>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Profile: home, about, work, experience and expertise pages -->
+  <sitemap>
+    <loc>https://italiaander.net/sitemap-pages.xml</loc>
     <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://italiaander.net/klokijk-quizz/</loc>
+  </sitemap>
+  <!-- Exercises for kids: clock and maths quizzes, worksheets -->
+  <sitemap>
+    <loc>https://italiaander.net/sitemap-exercises.xml</loc>
     <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://italiaander.net/reken-quizz/</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://italiaander.net/reken-werkbladen/optellen.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://italiaander.net/klokijk-quizz/questions/klok-animatie.html</loc>
-    <lastmod>2026-11-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-</urlset>
+  </sitemap>
+</sitemapindex>

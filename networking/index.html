@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-149SW6X5M5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-149SW6X5M5');
+    gtag('config', 'G-M0ZQ5MD9NL');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Networking &amp; Infrastructure | Benjamin Italiaander</title>
+  <meta name="description" content="Benjamin Italiaander on enterprise and data center networking: LACP, OSPF, BGP EVPN, VXLAN, MACsec, leaf-spine (Clos) fabrics, anycast gateways and SONiC.">
+  <meta name="author" content="Benjamin Italiaander">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07070d">
+  <link rel="canonical" href="https://italiaander.net/networking/">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://italiaander.net/networking/">
+  <meta property="og:title" content="Enterprise Networking &amp; Infrastructure | Benjamin Italiaander">
+  <meta property="og:description" content="Benjamin Italiaander on enterprise and data center networking: LACP, OSPF, BGP EVPN, VXLAN, MACsec, leaf-spine (Clos) fabrics, anycast gateways and SONiC.">
+  <meta property="og:site_name" content="Benjamin Italiaander">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://italiaander.net/networking/#webpage",
+        "url": "https://italiaander.net/networking/",
+        "name": "Enterprise Networking & Infrastructure",
+        "description": "Benjamin Italiaander on enterprise and data center networking: LACP, OSPF, BGP EVPN, VXLAN, MACsec, leaf-spine (Clos) fabrics, anycast gateways and SONiC.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://italiaander.net/#website"
+        },
+        "author": {
+          "@id": "https://italiaander.net/#me"
+        },
+        "about": {
+          "@id": "https://italiaander.net/#me"
+        },
+        "keywords": "LACP, OSPF, BGP, BGP EVPN, EVPN, VXLAN, VNI, MACsec, SONiC, Leaf-Spine, Clos Fabric, Anycast Gateway, Ethernet fabrics, Layer 2 / Layer 3, Network virtualization, Software-defined networking"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://italiaander.net/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Enterprise Networking & Infrastructure",
+            "item": "https://italiaander.net/networking/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="subpage">
+
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid"></div>
+  </div>
+
+  <nav class="topnav" aria-label="Main">
+    <a class="logo" href="../"><span class="logo-mark">BI</span><span class="logo-text">Benjamin Italiaander</span></a>
+    <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu"><i class="bi bi-list"></i></button>
+    <ul id="menu">
+      <li><a href="../about/">About me</a></li>
+      <li><a href="../work/">Work</a></li>
+      <li><a href="../experience/">Experience</a></li>
+      <li class="has-sub">
+        <a href="../experience/#expertise">Expertise <i class="bi bi-chevron-down"></i></a>
+        <ul class="sub">
+          <li><a href="../networking/"><span class="sub-emoji">🌐</span>Enterprise Networking &amp; Infrastructure</a></li>
+          <li><a href="../linux/"><span class="sub-emoji">🖥️</span>Linux, Containers &amp; Automation</a></li>
+          <li><a href="../local-ai/"><span class="sub-emoji">🧠</span>Local AI &amp; High-Performance Computing</a></li>
+          <li><a href="../research/"><span class="sub-emoji">🔬</span>Experimentation, Research &amp; Innovation</a></li>
+        </ul>
+      </li>
+      <li><a href="../exercises/">Exercises</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="crumbs reveal" aria-label="Breadcrumb"><a href="../">Home</a><i class="bi bi-chevron-right"></i><span aria-current="page">Enterprise Networking &amp; Infrastructure</span></nav>
+        <div class="topic-emoji reveal" style="--gc: 34, 211, 238">🌐</div>
+        <h1 class="reveal" style="--d:.05s">Enterprise Networking &amp; Infrastructure</h1>
+        <p class="page-lead reveal" style="--d:.1s">Scalable, resilient networks that combine proven networking principles with modern automation and software-defined architectures.</p>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="wrap page-grid">
+        <article class="prose">
+            <p class="reveal">With extensive experience in enterprise networking, I specialize in technologies such as <strong>LACP, OSPF, BGP, EVPN, VXLAN, VNI and MACsec</strong>, along with advanced Layer 2 and Layer 3 network architectures.</p>
+            <p class="reveal">I build <strong>leaf-spine (Clos) data center fabrics with BGP EVPN and anycast gateways</strong>, running on <strong>SONiC</strong>, the open network platform. My work covers high-performance Ethernet fabrics, enterprise switching, routing, network virtualization and software-defined infrastructure.</p>
+            <p class="reveal">I'm particularly interested in designing scalable, resilient networks that combine proven networking principles with modern automation and software-defined architectures.</p>
+        </article>
+        <aside class="glow side reveal" style="--gc: 34, 211, 238">
+          <h2>Technologies</h2>
+          <ul class="chips"><li class="tag">LACP</li><li class="tag">OSPF</li><li class="tag">BGP</li><li class="tag">BGP EVPN</li><li class="tag">EVPN</li><li class="tag">VXLAN</li><li class="tag">VNI</li><li class="tag">MACsec</li><li class="tag">SONiC</li><li class="tag">Leaf-Spine</li><li class="tag">Clos Fabric</li><li class="tag">Anycast Gateway</li><li class="tag">Ethernet fabrics</li><li class="tag">Layer 2 / Layer 3</li><li class="tag">Network virtualization</li><li class="tag">Software-defined networking</li></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page-body more">
+      <div class="wrap">
+        <span class="label reveal">more topics</span>
+        <div class="cards">
+          <a class="card glow topic-link reveal" style="--gc: 52, 211, 153; --d:0.0s" href="../linux/">
+            <div class="emoji">🖥️</div>
+            <h3>Linux, Containers &amp; Automation</h3>
+            <p>Fedora, Debian and Red Hat. DNS, DHCP, LDAP, RADIUS, nginx and Caddy.</p>
+            <span class="go">Read more <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="card glow topic-link reveal" style="--gc: 167, 139, 250; --d:0.1s" href="../local-ai/">
+            <div class="emoji">🧠</div>
+            <h3>Local AI &amp; High-Performance Computing</h3>
+            <p>Self-hosted AI on NVIDIA DGX Spark with Exo, running large models locally.</p>
+            <span class="go">Read more <i class="bi bi-arrow-right"></i></span>
+          </a>
+          <a class="card glow topic-link reveal" style="--gc: 244, 114, 182; --d:0.2s" href="../research/">
+            <div class="emoji">🔬</div>
+            <h3>Experimentation, Research &amp; Innovation</h3>
+            <p>Building experimental environments at scale, well beyond a typical lab.</p>
+            <span class="go">Read more <i class="bi bi-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Benjamin Italiaander</span>
+      <div class="foot-links">
+        <a href="https://github.com/Benjamin-Italiaander" target="_blank" rel="me noopener"><i class="bi bi-github"></i><span>GitHub</span></a>
+        <a href="https://www.linkedin.com/in/italiaander" target="_blank" rel="me noopener"><i class="bi bi-linkedin"></i><span>LinkedIn</span></a>
+        <a href="https://www.cwi.nl/en/people/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-building"></i><span>CWI</span></a>
+        <a href="https://pure.knaw.nl/portal/nl/persons/benjamin-italiaander/" target="_blank" rel="me noopener"><i class="bi bi-journal-text"></i><span>KNAW</span></a>
+      </div>
+    </div>
+    <div class="wrap site-links">
+      <a href="../">Home</a><a href="../about/">About me</a><a href="../work/">Work</a><a href="../experience/">Experience</a><a href="../networking/">Networking</a><a href="../linux/">Linux &amp; Automation</a><a href="../local-ai/">Local AI</a><a href="../research/">Research &amp; Innovation</a><a href="../exercises/">Exercises</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+
+</html>
