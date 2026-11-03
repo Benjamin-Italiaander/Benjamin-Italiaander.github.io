@@ -25,6 +25,8 @@ for p in "${PROJECTS[@]}"; do
   echo "   $(git -C "$TMP/$p" log --oneline -1)"
   mkdir -p "$p"
   rsync -a --delete --exclude .git "$TMP/$p/" "$p/"
+  # the sync overwrites the pages, so put the Google tag + cookie consent back
+  python3 -I tools/add-google-tag.py "$p"
   git add -A "$p"
 done
 
